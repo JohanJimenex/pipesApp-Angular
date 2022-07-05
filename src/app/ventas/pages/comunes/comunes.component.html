@@ -1,0 +1,148 @@
+<div>
+  <h1>Pipes Comunes</h1>
+  <p>Estos Pipes vienen incluidos en el modulo "CommonModule"</p>
+</div>
+
+<div class="grid">
+  <div class="col-12 md:col-6 lg:col-4  ">
+    <p-card
+      header="Uppercase Pipe"
+      [subheader]="'String original: '+ nombreLower"
+    >
+      <div class="grid">
+
+        <div class="col-7 m-auto">
+          <small>Ejemplo:</small>
+          <br>
+          {{'{{nombreLower | uppercase}}'}}
+        </div>
+
+        <div class="col-5 m-auto">
+          <small>Resultado:</small>
+          <br>
+          {{nombreLower | uppercase}}
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-4 ">
+    <p-card
+      header="Lowercase Pipe"
+      [subheader]="'String original: '+ nombreUpper"
+    >
+      <div class="grid">
+
+        <div class="col-7 m-auto">
+          <small>Ejemplo:</small>
+          <br>
+
+          {{'{{nombreUpper | lowercase}}'}}
+
+        </div>
+
+        <div class="col-5 m-auto">
+          <small>Resultado:</small>
+          <br>
+          {{nombreUpper | lowercase}}
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-4 ">
+    <p-card
+      header="Titlecase Pipe"
+      [subheader]="'String original: '+ nombreMixto"
+    >
+      <div class="grid">
+
+        <div class="col-7 m-auto">
+          <small>Ejemplo:</small>
+          <br>
+
+          {{'{{nombreMixto | titlecase}}'}}
+
+        </div>
+
+        <div class="col-5 m-auto">
+          <small>Resultado:</small>
+          <br>
+          {{nombreMixto | titlecase}}
+        </div>
+
+      </div>
+    </p-card>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <h1>Dates | Fecha Pipe</h1>
+  <p>Estos Pipes vienen incluidos en el modulo "CommonModule"</p>
+</div>
+{{1000 | number}}
+<div class="grid">
+
+  <div class="col-12 md:col-5">
+    <p-card header="Ejemplo">
+      <ul>
+        <li>Fecha por defecto</li>
+        <li>Fecha | dates</li>
+        <li>Fecha | date:'short'</li>
+        <li>Fecha | date:'medium'</li>
+        <li>Fecha | date:'long'</li>
+        <li>Fecha | date:'fullDate'</li>
+        <li>Fecha | date:'MMMM dd, yyyy'</li>
+      </ul>
+
+      <hr>
+
+      <ul>
+        <li>fecha | date:'long' : 'GMT-6' </li>
+        <li>fecha | date:'long' : 'GMT-7' </li>
+        <li>fecha | date:'long' : '' : 'en' </li>
+        <li>fecha | date:'long' : 'GMT-2' : 'en' </li>
+      </ul>
+
+    </p-card>
+  </div>
+
+
+  <div class="col-12 md:col-7">
+    <p-card header="Resultado">
+      <ul>
+        <li>{{fecha}}</li>
+        <li>{{fecha | date}}</li>
+        <li>{{fecha | date:'short'}}</li>
+        <li>{{fecha | date:'medium'}}</li>
+        <li>{{fecha | date:'long'}}</li>
+        <li>{{fecha | date:'MMMM dd, yyyy'}}</li>
+      </ul>
+
+      <hr>
+
+      <ul>
+        <li>{{fecha | date:'long' : 'GMT-6'}} </li>
+        <li>{{fecha | date:'long' : 'GMT-7'}} </li>
+        <li>{{fecha | date:'long' : '' : 'en'}} </li>
+        <li>{{fecha | date:'long' : 'GMT-7' : 'en'}} </li>
+      </ul>
+
+    </p-card>
+  </div>
+
+  <small>Mas formatos en
+    <a
+      class="text-primary"
+      href="https://angular.io/api/common/DatePipe"
+      target="_blank"
+    >
+      Angular.io
+    </a>
+  </small>
+
+</div>

@@ -1,0 +1,59 @@
+<div>
+  <h1>Decimal | Number Pipes para números</h1>
+  <p>Estos Pipes vienen incluidos en el modulo "CommonModule"</p>
+</div>
+
+<div class="grid">
+
+  <div class="col-11   md:col-4">
+
+    <p-card
+      header="Number Pipe"
+      subheader="{ventasNetas | number:'0.2-2'"
+    >
+
+      <strong>Monto: </strong>
+      <span>
+        DOP $ {{ventasNetas | number:'0.2-2'}}
+      </span>
+    </p-card>
+
+  </div>
+
+  <div class="col-11   md:col-4">
+
+    <p-card
+      header="Percent Pipe"
+      subheader="Préstamo"
+    >
+      <strong>Valor: </strong>
+      <span> {{porcentaje | percent:'2.2-2'}} </span>
+    </p-card>
+
+  </div>
+
+  <div class="col-11   md:col-4">
+
+    <p-card
+      header="Currency Pipe"
+      subheader="{ventasNetas | currency}"
+    >
+      <strong>Monto: </strong>
+      <span> {{ventasNetas | currency}} </span>
+
+      <br>
+
+      <strong>Monto: </strong>
+      <span> {{ventasNetas | currency:'DOP'}} </span>
+
+      <br>
+
+      <strong>Monto: </strong>
+      <span> {{ventasNetas | currency:'DOP':'symbol-narrow':'1.0-2'}} </span>
+
+    </p-card>
+
+  </div>
+
+
+</div>
