@@ -1,4 +1,5 @@
 import { Component, } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -19,7 +20,7 @@ export class NoComunesComponent {
   CambiarPersona(): void {
 
     if (this.genero == "masculino") {
-      this.nombre = "María";
+      this.nombre = "Pamela";
       this.genero = "femenino"
 
     } else {
@@ -48,5 +49,41 @@ export class NoComunesComponent {
     console.log(this.arrClientes);
   }
 
+  //KeyValue and Json Pipes
+  objPersona = {
+    nombre: "Johan",
+    edad: 25,
+    esProgramador: true
+  }
+
+
+  //Async pipe
+
+  miObservable = interval(1000); //emite un conteo desde cero cada un segundo
+
+  //promesa
+  promesa = new Promise((respuesta, error) => {
+    setTimeout(() => {
+
+      return respuesta("Klk mundo!");
+
+    },11000);
+  });
+
+
+  promesaCompletada = false;
+
+  constructor() {
+
+    this.miObservable.subscribe(num => {
+      // console.log(num);//emite un conteo desde cero
+    });
+
+    this.promesa.then((respuesta => {
+      console.log(respuesta);
+      this.promesaCompletada = true;
+    }))
+
+  }
 
 }
