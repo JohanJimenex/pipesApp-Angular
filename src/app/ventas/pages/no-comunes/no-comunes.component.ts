@@ -1,15 +1,52 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-no-comunes',
   templateUrl: './no-comunes.component.html',
   styleUrls: ['./no-comunes.component.css']
 })
-export class NoComunesComponent implements OnInit {
+export class NoComunesComponent {
 
-  constructor() { }
+  //i18nSelectMap
+  nombre: string = "Johan";
+  genero: string = "masculino";
 
-  ngOnInit(): void {
+  i18nSelectMap = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
   }
+
+  CambiarPersona(): void {
+
+    if (this.genero == "masculino") {
+      this.nombre = "María";
+      this.genero = "femenino"
+
+    } else {
+      this.nombre = "Johan"
+      this.genero = "masculino"
+    }
+
+  }
+
+  // i18nPlural
+  arrClientes: string[] = ["d", "f", "s"];
+
+  i18nPluralMap = {
+    '=0': 'no tenemos ningún cliente esperando',
+    '=1': 'tenemos un cliente esperando',
+    'other': `tenemos # clientes esperando`
+  }
+
+  Agregar(): void {
+    this.arrClientes.push("test")
+    console.log(this.arrClientes);
+  }
+
+  Disminuir(): void {
+    this.arrClientes.pop()
+    console.log(this.arrClientes);
+  }
+
 
 }

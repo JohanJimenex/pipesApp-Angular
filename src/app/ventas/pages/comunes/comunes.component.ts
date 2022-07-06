@@ -18,6 +18,10 @@ export class ComunesComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.fecha);
   }
+  localE() {
+    
 
+    let x: string = "d"
+  }
 
 }

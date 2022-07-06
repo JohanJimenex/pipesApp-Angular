@@ -28,7 +28,7 @@ const routes: Routes = [
   ,
   {
     path: "**",
-    redirectTo: ""
+    redirectTo: "/"
     // component: ComunesComponent
   }
 ]

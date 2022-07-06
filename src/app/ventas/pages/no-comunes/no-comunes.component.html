@@ -1,1 +1,54 @@
-<p>no-comunes works!</p>
+<div>
+  <h1>Pipes no tan comunes</h1>
+  <p>Estos Pipes vienen incluidos en el modulo "CommonModule"</p>
+</div>
+
+<div class="grid">
+
+  <div class="col-12 md:col-6">
+    <p-fieldset
+      legend="i18nSelect Pipe"
+      [toggleable]="true"
+    > Saludos <strong>{{nombre}}</strong>, es un placer <strong> {{genero | i18nSelect: i18nSelectMap}}</strong> a
+      nuestro evento.
+    </p-fieldset>
+
+    <div class="flex justify-content-center">
+      <button
+        pButton
+        label="Cambiar persona"
+        class="mt-2"
+        (click)="CambiarPersona()"
+      ></button>
+    </div>
+
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset
+      legend="i18nPlural Pipe"
+      [toggleable]="true"
+    > Actualmente {{ arrClientes.length | i18nPlural:i18nPluralMap }}
+    </p-fieldset>
+
+    <div class="flex justify-content-center">
+
+      <button
+        pButton
+        label="Disminuir -"
+        class="m-2"
+        (click)="Disminuir()"
+      ></button>
+      <button
+        pButton
+        label="Aumentar +"
+        class="m-2"
+        (click)="Agregar()"
+      ></button>
+    </div>
+  </div>
+
+
+</div>
+
+<br>

@@ -1,7 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { PrimeNgModule } from './prime-ng/prime-ng.module';
@@ -28,7 +28,8 @@ registerLocaleData(localFr);
     PrimeNgModule,
     SharedModule,
     VentasModule,
-    AppRouterModule
+    AppRouterModule,
+    BrowserAnimationsModule
   ],
   providers: [
     //Aplica el idioma a todo el codigo global.

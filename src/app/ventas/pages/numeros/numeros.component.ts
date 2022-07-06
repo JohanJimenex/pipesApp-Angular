@@ -11,4 +11,5 @@ export class NumerosComponent {
   porcentaje: number = 0.1850;
 
 
+
 }
