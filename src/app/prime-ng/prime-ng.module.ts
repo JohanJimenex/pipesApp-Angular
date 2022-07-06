@@ -7,6 +7,8 @@ import { MenubarModule } from 'primeng/menubar';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { ProgressSpinnerModule } from 'primeng/progressspinner'
+import { ToolbarModule } from 'primeng/toolbar';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [],
@@ -18,6 +20,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner'
     FieldsetModule,
     TagModule,
     ProgressSpinnerModule,
+    ToolbarModule,
+    TableModule
   ]
 })
 export class PrimeNgModule { }

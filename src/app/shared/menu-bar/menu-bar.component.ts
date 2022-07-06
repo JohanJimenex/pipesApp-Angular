@@ -29,11 +29,6 @@ export class MenuBarComponent {
           label: 'Pipes de Números',
           icon: "pi pi-hashtag",
           routerLink: "numeros"
-        },
-        {
-          label: 'Pipes Ordenados',
-          icon: "pi pi-angle-double-down",
-          routerLink: "ordenado"
         }
       ]
     },
@@ -42,7 +37,9 @@ export class MenuBarComponent {
       icon: "pi pi-heart",
       items: [
         {
-
+          label: 'Pipes Ordenados',
+          icon: "pi pi-angle-double-down",
+          routerLink: "ordenado"
         }
       ]
     },
@@ -53,7 +50,6 @@ export class MenuBarComponent {
       target: "_blank"
     }
   ];
-
 
 
 }

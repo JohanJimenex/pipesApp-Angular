@@ -6,6 +6,7 @@ import { ComunesComponent } from './pages/comunes/comunes.component';
 import { NumerosComponent } from './pages/numeros/numeros.component';
 import { NoComunesComponent } from './pages/no-comunes/no-comunes.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
+import { MayusculasPipe } from './pipes/mayusculas.pipe';
 
 
 
@@ -14,11 +15,12 @@ import { OrdenarComponent } from './pages/ordenar/ordenar.component';
     NumerosComponent,
     NoComunesComponent,
     ComunesComponent,
-    OrdenarComponent
+    OrdenarComponent,
+    MayusculasPipe
   ],
   imports: [
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   exports: [
     ComunesComponent,

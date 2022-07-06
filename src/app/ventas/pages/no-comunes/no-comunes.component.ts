@@ -76,11 +76,13 @@ export class NoComunesComponent {
   constructor() {
 
     this.miObservable.subscribe(num => {
-      // console.log(num);//emite un conteo desde cero
+      console.log(num);//emite un conteo desde cero
     });
 
     this.promesa.then((respuesta => {
+
       console.log(respuesta);
+
       this.promesaCompletada = true;
     }))
 
