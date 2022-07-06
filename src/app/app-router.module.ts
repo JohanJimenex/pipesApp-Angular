@@ -10,7 +10,7 @@ import { OrdenarComponent } from './ventas/pages/ordenar/ordenar.component';
 const routes: Routes = [
   {
     path: "",
-    component: ComunesComponent,
+    component: NoComunesComponent,
     pathMatch: "full"
   },
   {
@@ -18,8 +18,8 @@ const routes: Routes = [
     component: NumerosComponent
   },
   {
-    path: "no-comunes",
-    component: NoComunesComponent
+    path: "comunes",
+    component: ComunesComponent
   },
   {
     path: "ordenado",

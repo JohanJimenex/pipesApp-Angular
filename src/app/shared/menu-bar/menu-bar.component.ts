@@ -16,13 +16,13 @@ export class MenuBarComponent {
         {
           label: 'Pipes Comunes',
           icon: "pi pi-bolt",
-          routerLink: "/",
+          routerLink: "comunes",
           badge: "new"
         },
         {
           label: 'Pipes No comunes',
           icon: "pi pi-star",
-          routerLink: "no-comunes"
+          routerLink: "/"
         }
         ,
         {

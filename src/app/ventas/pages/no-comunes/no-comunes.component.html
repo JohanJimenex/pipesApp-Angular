@@ -3,6 +3,59 @@
   <p>Estos Pipes vienen incluidos en el modulo "CommonModule"</p>
 </div>
 
+<!-- Json, Async Pipe -->
+<div class="grid">
+
+  <div class="col-12 md:col-6  ">
+    <p-fieldset
+      legend="Async Pipe"
+      [toggleable]="true"
+    >
+
+      Para trabajar con promesas / observable.
+      <br>
+
+      <!-- //el pipe async se subscribe al observable y devuelve el valor -->
+      <div class="flex align-content-center">
+        <h1 class="m-auto">{{miObservable | async}}</h1>
+      </div>
+
+      <br>
+
+      Valor con promesa luego de 10 segundos:
+      <div
+        class="text-center"
+        *ngIf="promesaCompletada == false"
+      >
+
+        <h4 class=""> Cargando respuesta...</h4>
+        <br>
+        <p-progressSpinner class="mx-auto"></p-progressSpinner>
+
+      </div>
+
+      <pre>
+        {{promesa | async}} <p-tag *ngIf="promesaCompletada" value="New"></p-tag>
+      </pre>
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6  ">
+    <p-fieldset
+      legend="Json Pipe"
+      [toggleable]="true"
+    >
+
+      Muestra un json en su forma original:
+      <br>
+      {{objPersona | json}}
+
+    </p-fieldset>
+  </div>
+
+</div>
+
 <!-- i18nSelect, i18nPlural Pipes -->
 <div class="grid">
 
@@ -101,59 +154,3 @@
   </div>
 
 </div>
-
-<!-- Json, Async Pipe -->
-<div class="grid">
-
-  <div class="col-12 md:col-6  ">
-    <p-fieldset
-      legend="Json Pipe"
-      [toggleable]="true"
-    >
-
-      Muestra un json en su forma original:
-      <br>
-      {{objPersona | json}}
-
-    </p-fieldset>
-  </div>
-
-  <div class="col-12 md:col-6  ">
-    <p-fieldset
-      legend="Async Pipe"
-      [toggleable]="true"
-    >
-
-      Para trabajar con promesas / observable.
-      <br>
-
-      <!-- //el pipe async se subscribe al observable y devuelve el valor -->
-      <div class="flex align-content-center">
-        <h1 class="m-auto">{{miObservable | async}}</h1>
-      </div>
-
-      <br>
-
-      Valor con promesa luego de 10 segundos:
-      <div
-        class="text-center"
-        *ngIf="promesaCompletada == false"
-      >
-
-        <h4 class=""> Cargando respuesta...</h4>
-        <br>
-        <p-progressSpinner class="mx-auto"></p-progressSpinner>
-
-      </div>
-
-      <pre>
-        {{promesa | async}} <p-tag *ngIf="promesaCompletada" value="New"></p-tag>
-      </pre>
-
-    </p-fieldset>
-  </div>
-
-</div>
-
- 
- 
