@@ -30,7 +30,7 @@ export class NoComunesComponent {
   }
 
   // i18nPlural
-  arrClientes: string[] = ["d", "f", "s"];
+  arrClientes: string[] = ["Carol", "Pedro", "Ana", "Miguel", "Tilin", "Johan"];
 
   i18nPluralMap = {
     '=0': 'no tenemos ningún cliente esperando',
@@ -39,7 +39,7 @@ export class NoComunesComponent {
   }
 
   Agregar(): void {
-    this.arrClientes.push("test")
+    this.arrClientes.push("Johan")
     console.log(this.arrClientes);
   }
 

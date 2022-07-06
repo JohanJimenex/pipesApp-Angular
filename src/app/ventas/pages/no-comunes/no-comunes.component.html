@@ -48,7 +48,25 @@
     </div>
   </div>
 
-
 </div>
 
-<br>
+<div class="grid mt-3">
+
+  <div class="col-12 md:col-6  ">
+    <p-fieldset legend="Slice Pipe para limitar Arrays">
+
+      Cantidad total de String en el arreglo: <strong> {{arrClientes.length}} </strong>
+
+      <br>
+      <br>
+
+      Mostrando solo 3 con el Pipe de Slice:
+      <ul>
+        <li *ngFor="let cliente of arrClientes | slice:1:4">{{cliente}}</li>
+      </ul>
+
+    </p-fieldset>
+
+  </div>
+
+</div>
