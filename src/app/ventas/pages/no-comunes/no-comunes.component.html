@@ -9,7 +9,7 @@
     <p-fieldset
       legend="i18nSelect Pipe"
       [toggleable]="true"
-    > Saludos <strong>{{nombre}}</strong>, es un placer <strong> {{genero | i18nSelect: i18nSelectMap}}</strong> a
+    > Saludos <b>{{nombre}}</b>, es un placer <b> {{genero | i18nSelect: i18nSelectMap}}</b> a
       nuestro evento.
     </p-fieldset>
 
@@ -55,14 +55,20 @@
   <div class="col-12 md:col-6  ">
     <p-fieldset legend="Slice Pipe para limitar Arrays">
 
-      Cantidad total de String en el arreglo: <strong> {{arrClientes.length}} </strong>
+      Cantidad total de String en el arreglo: <b> {{arrClientes.length}} </b>
 
       <br>
       <br>
 
-      Mostrando solo 3 con el Pipe de Slice:
+      Mostrando maximo 3 con el Pipe de Slice:
+      
       <ul>
+        <b> Con directiva del bucle ngFor:</b>
         <li *ngFor="let cliente of arrClientes | slice:1:4">{{cliente}}</li>
+        <br>
+
+        <b>Injección directa del arreglo: </b>
+        <li>{{arrClientes | slice:1:4 }}</li>
       </ul>
 
     </p-fieldset>
